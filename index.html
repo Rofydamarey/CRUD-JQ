@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="w-75 mx-auto p-2 bg-secondary m-3 shadow-lg">
+        <h1 class="text-center my-2"> CRUD SYSTEM</h1>
+        <div class="form-floating my-1">
+            <input type="text" class="form-control" id="productName" placeholder="" oninput="validation(this)" >
+            <label for="productName">ProductName</label>
+        </div>
+        <div class="form-floating my-1">
+            <input type="number" class="form-control" id="productPrice" placeholder="" oninput="validation(this)"  >
+            <label for="productPrice">productPrice</label>
+        </div>
+        <div class="form-floating my-1">
+            <input type="text" class="form-control" id="productCategory" placeholder="" oninput="validation(this)" >
+            <label for="productcategory">productcategory</label>
+        </div>
+        <div class="form-floating my-1">
+            <textarea style="height: 100px;" type="text" class="form-control " id="productDescription"
+                 placeholder=""oninput="validation(this)" ></textarea>
+            <label for="productDescription">productDescription</label>
+        </div>
+        <div class="form-floating my-1">
+            <input type="File" class="form-control" id="productImage" placeholder="">
+            <label for="productImage">productImage</label>
+        </div>
+        <button  id="btnAdd" class="btn btn-info">AddProduct</button>
+        <button onclick="updateData()" id="btnUpdate" class="btn btn-warning d-none">UpdateProduct</button>
+    </div>
+    <input oninput="displayData() " type="search" class="form-control my-2 w-50 mx-auto" id="searchInput"
+        placeholder="Search By Name...">
+
+
+    <table class="table text-center ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+
+        </tbody>
+    </table>
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
